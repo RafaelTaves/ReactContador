@@ -1,7 +1,5 @@
-.visor {
-    text-align: center;
-}
-
-.visor h3 {
-    font-size: 64px;
+h3 {
+    font-size: 40px;
+    margin: 0px 24px 0px 24px;
+    color: #fff;
 }

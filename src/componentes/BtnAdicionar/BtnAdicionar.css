@@ -1,0 +1,10 @@
+.adicionar button {
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;     
+    border-radius: 5px;
+    font-size: 32px;
+    cursor: pointer;
+    color: #fff;
+}
