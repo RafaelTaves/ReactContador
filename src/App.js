@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import BtnAdicionar from "./componentes/BtnAdicionar";
+import Visor from "./componentes/visor";
+import BtnSubtrair from "./componentes/BtnSubtrair";
 
 function App() {
+  const [valorInicial, setValorInicial] = useState(0)
+
+  const incrementarValor = () => {
+    setValorInicial(valorInicial + 1)
+  }
+
+  const subtrairValor = () => {
+    setValorInicial(valorInicial - 1)
+  }
+
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Visor valor={valorInicial} />
+      <BtnAdicionar aoAlterar={incrementarValor} />
+      <BtnSubtrair aoAlterar={subtrairValor} />
     </div>
   );
 }
